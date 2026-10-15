@@ -1,0 +1,197 @@
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: center;
+  transition:
+    background 0.25s,
+    transform 0.15s;
+  margin-top: 6px;
+}
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-acessar {
+  display: block;
+  width: calc(100% - 32px);
+  margin: 10px 16px 16px;
+  padding: 9px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.2s;
+}
+.btn-acessar:hover {
+  background: var(--primary-light);
+}
+
+.btn-entregar {
+  padding: 8px 18px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn-entregar:hover {
+  background: var(--primary-light);
+}
+.btn-entregar--disabled {
+  background: #6b7280;
+  cursor: default;
+}
+.btn-entregar--disabled:hover {
+  background: #6b7280;
+}
+
+.btn-vis {
+  padding: 8px 18px;
+  background: var(--border);
+  color: var(--text-muted);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-fav {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  transition: 0.2s;
+}
+.btn-fav:hover {
+  color: #f59e0b;
+}
+.btn-fav.active {
+  color: #f59e0b;
+}
+
+.btn-ac {
+  padding: 7px 16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn-ac:hover {
+  background: var(--primary-light);
+}
+
+.cal-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.cal-btn:hover {
+  background: var(--primary-bg);
+  color: var(--primary);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  background: var(--bg-card);
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  width: fit-content;
+  margin-bottom: 22px;
+}
+.tab {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: 0.2s;
+}
+.tab.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.contacts-tabs {
+  display: flex;
+  padding: 10px 14px;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.ctab {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  transition: 0.2s;
+  color: var(--text-muted);
+}
+.ctab.active {
+  background: var(--bg-main);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.chat-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 0.9375rem;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+.chat-ico:hover {
+  color: var(--primary);
+  background: var(--primary-bg);
+}
+.send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.send-btn:hover {
+  background: var(--primary-light);
+}
+.chat-actions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.875rem;
+  transition: 0.2s;
+}
+.chat-actions button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}

@@ -1,0 +1,49 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de estudante em frente ao computador">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#deeaf7" />
+      <stop offset="100%" stop-color="#c5d9ee" />
+    </linearGradient>
+    <linearGradient id="monitorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a6bbf" />
+      <stop offset="100%" stop-color="#0c447c" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bgGrad)" />
+
+  <!-- pontos decorativos, mesmo motivo do logo -->
+  <circle cx="70" cy="80" r="8" fill="#f9ab00" opacity="0.85" />
+  <circle cx="330" cy="70" r="6" fill="#22c55e" opacity="0.85" />
+  <circle cx="345" cy="140" r="5" fill="#ef4444" opacity="0.75" />
+  <circle cx="55" cy="300" r="6" fill="#a855f7" opacity="0.75" />
+
+  <!-- mesa -->
+  <rect x="60" y="290" width="280" height="14" rx="7" fill="#0c447c" opacity="0.18" />
+
+  <!-- monitor -->
+  <rect x="140" y="150" width="120" height="90" rx="10" fill="url(#monitorGrad)" />
+  <rect x="152" y="162" width="96" height="66" rx="4" fill="#ffffff" opacity="0.92" />
+  <rect x="162" y="174" width="56" height="6" rx="3" fill="#c5d9ee" />
+  <rect x="162" y="186" width="76" height="6" rx="3" fill="#c5d9ee" />
+  <rect x="162" y="198" width="40" height="6" rx="3" fill="#f9ab00" />
+  <rect x="186" y="240" width="28" height="16" fill="#0c447c" />
+  <rect x="166" y="254" width="68" height="8" rx="4" fill="#0c447c" opacity="0.35" />
+
+  <!-- livro aberto -->
+  <path d="M60 268 Q100 250 140 268 L140 286 Q100 268 60 286 Z" fill="#ffffff" />
+  <path d="M140 268 Q180 250 220 268 L220 286 Q180 268 140 286 Z" fill="#eef4ff" />
+  <path d="M60 268 Q100 250 140 268" fill="none" stroke="#0c447c" stroke-width="2.5" opacity="0.4" />
+  <path d="M140 268 Q180 250 220 268" fill="none" stroke="#0c447c" stroke-width="2.5" opacity="0.4" />
+
+  <!-- xícara -->
+  <rect x="270" y="256" width="26" height="22" rx="4" fill="#ffffff" />
+  <path d="M296 260 q10 0 10 9 t-10 9" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+
+  <!-- capelo de formatura, flutuando -->
+  <g transform="translate(275 90) rotate(-12)">
+    <polygon points="0,0 46,14 0,28 -46,14" fill="#0c447c" />
+    <rect x="-6" y="14" width="12" height="20" rx="2" fill="#0c447c" />
+    <circle cx="0" cy="34" r="4" fill="#f9ab00" />
+  </g>
+</svg>

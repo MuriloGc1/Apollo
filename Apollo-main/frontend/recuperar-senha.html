@@ -3,21 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recuperar Senha — SKY</title>
+    <title>Recuperar Senha — APOLLO</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <body class="auth-body">
     <div class="auth-card">
-      <!-- ── ESQUERDA: ilustração ── -->
       <div class="auth-left">
-        <img src="assets/img/auth-illustration.webp" alt="Estudante estudando em frente ao computador" class="auth-illustration" />
+        <img src="assets/images/auth-illustration.svg" alt="Estudante estudando em frente ao computador" class="auth-illustration" />
       </div>
 
-      <!-- ── DIREITA: formulário ── -->
       <div class="auth-right">
-        <!-- Logo SKY -->
-        <div class="sky-logo">
+        <div class="brand-logo">
           <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
             <circle cx="48" cy="12" r="5" fill="#F9AB00" />
             <circle cx="62" cy="6" r="4" fill="#22c55e" />
@@ -30,10 +27,9 @@
             <line x1="60" y1="32" x2="60" y2="72" stroke="#0C447C" stroke-width="2.5" opacity=".4" />
             <path d="M18 68 Q60 50 102 68 L100 74 Q60 56 20 74 Z" fill="#0C447C" opacity=".12" />
           </svg>
-          <span class="sky-logo-text">SKY</span>
+          <span class="brand-logo-text">APOLLO</span>
         </div>
 
-        <!-- PASSO 1: enviar e-mail -->
         <div id="step-form">
           <h1 class="auth-title">Recuperar Senha</h1>
           <p class="recover-info">
@@ -51,29 +47,22 @@
           </div>
         </div>
 
-        <!-- PASSO 2: confirmação (aparece após envio) -->
         <div id="step-success">
           <div class="success-box">
             <div class="success-icon">📩</div>
             <h1 class="auth-title">E-mail Enviado!</h1>
             <p class="auth-sub">Confira sua caixa de entrada</p>
             <ul class="step-list">
-              <li><strong>1. Procure a mensagem:</strong> O assunto é "Redefinição de Senha — SKY".</li>
+              <li><strong>1. Procure a mensagem:</strong> O assunto é "Redefinição de Senha — APOLLO".</li>
               <li><strong>2. Acesse o link:</strong> Clique no link para criar sua nova senha.</li>
               <li><strong>3. Não encontrou?</strong> Verifique a pasta de Spam ou Lixo Eletrônico.</li>
             </ul>
-            <button class="btn-primary" onclick="window.location.href = 'login.html'">Voltar para o Login</button>
+            <a href="login.html" class="btn-primary">Voltar para o Login</a>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      document.getElementById("recover-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        document.getElementById("step-form").style.display = "none";
-        document.getElementById("step-success").style.display = "block";
-      });
-    </script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

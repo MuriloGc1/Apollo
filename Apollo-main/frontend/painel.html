@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APOLLO — Sistema Educacional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="app-body">
+    <div class="app">
+      <header>
+        <div class="header-logo">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="48" cy="14" r="5" fill="#F9AB00" />
+            <circle cx="62" cy="8" r="4" fill="#22c55e" />
+            <circle cx="76" cy="12" r="5" fill="#60a5fa" />
+            <circle cx="88" cy="20" r="4" fill="#ef4444" />
+            <path d="M20 52 Q60 34 100 52" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" />
+            <path d="M20 60 Q60 42 100 60" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7" />
+            <path d="M20 68 Q60 50 100 68" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".5" />
+          </svg>
+          <span class="header-logo-name">APOLLO</span>
+        </div>
+
+        <div class="header-right">
+          <button class="hbtn"><i class="fa-regular fa-bell"></i><span class="notif-dot"></span></button>
+          <button class="hbtn"><i class="fa-solid fa-gear"></i></button>
+          <button class="hbtn" id="theme-toggle" title="Alternar modo escuro"><i class="fa-solid fa-moon"></i></button>
+          <div class="user-chip" id="user-chip" title="Sair da conta">
+            <div class="avatar" id="user-avatar"></div>
+            <div class="user-info">
+              <div class="user-name" id="user-name">Olá!</div>
+              <div class="user-role" id="user-role"></div>
+            </div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <div class="nav-label">Menu</div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="nav-link active" data-screen="inicio">
+                <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+                Início
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-screen="tarefas">
+                <span class="nav-icon"><i class="fa-solid fa-list-check"></i></span>
+                Tarefas
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-screen="agenda">
+                <span class="nav-icon"><i class="fa-regular fa-calendar-days"></i></span>
+                Agenda
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-screen="biblioteca">
+                <span class="nav-icon"><i class="fa-solid fa-book-open"></i></span>
+                Biblioteca
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-screen="notas">
+                <span class="nav-icon"><i class="fa-solid fa-chart-bar"></i></span>
+                Notas
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-screen="mensagens">
+                <span class="nav-icon"><i class="fa-regular fa-envelope"></i></span>
+                Mensagens
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-help">
+          <i class="fa-solid fa-circle-question"></i>
+          <p>Precisa de ajuda?</p>
+          <span>Central de Ajuda →</span>
+        </div>
+      </aside>
+
+      <main>
+        <section class="screen active" id="inicio">
+          <div class="page-title">Painel Inicial</div>
+          <div class="page-sub">Bem-vindo de volta! Veja suas atualizações de hoje.</div>
+
+          <div class="section-header">
+            <div class="section-title"><i class="fa-solid fa-bell"></i> Avisos</div>
+            <span class="see-all">Ver todos</span>
+          </div>
+          <div class="avisos-scroll" id="avisos-container"></div>
+
+          <div class="section-header section-header--spaced">
+            <div class="section-title"><i class="fa-solid fa-graduation-cap"></i> Minhas Disciplinas</div>
+          </div>
+          <div class="disc-grid" id="disciplinas-container"></div>
+        </section>
+
+        <section class="screen" id="tarefas">
+          <div class="page-title">Tarefas</div>
+          <div class="page-sub">Acompanhe e envie atividades</div>
+
+          <div class="filtros">
+            <div class="filtro-badge f-red"><i class="fa-solid fa-triangle-exclamation"></i> Expirado / Atrasado</div>
+            <div class="filtro-badge f-yellow"><i class="fa-solid fa-clock"></i> Ainda não entregue</div>
+            <div class="filtro-badge f-green"><i class="fa-solid fa-circle-check"></i> Entregue</div>
+            <div class="filtros-actions">
+              <button class="hbtn hbtn--muted" id="tarefas-view-grid" title="Ver em grade"><i class="fa-solid fa-table-cells"></i></button>
+              <button class="hbtn hbtn--active" id="tarefas-view-list" title="Ver em lista"><i class="fa-solid fa-list"></i></button>
+            </div>
+          </div>
+
+          <div class="tarefas-layout">
+            <div id="tarefas-container"></div>
+
+            <div class="card status-panel">
+              <div class="section-title section-title--tight"><i class="fa-solid fa-chart-pie"></i> Status das Tarefas</div>
+              <select class="select-field status-select" id="filtro-disciplina">
+                <option value="">Todas as disciplinas</option>
+              </select>
+              <div id="status-tarefas-container"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="agenda">
+          <div class="page-title">Agenda</div>
+          <div class="page-sub">Seus compromissos acadêmicos do mês</div>
+
+          <div class="agenda-layout">
+            <div class="card cal-card">
+              <div class="cal-nav">
+                <button class="cal-btn" data-cal-nav="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="cal-month"></div>
+                <button class="cal-btn" data-cal-nav="next"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+              <div class="cal-legend">
+                <div class="leg-item"><div class="leg-dot leg-dot--atividade"></div>Atividade</div>
+                <div class="leg-item"><div class="leg-dot leg-dot--prova"></div>Prova</div>
+                <div class="leg-item"><div class="leg-dot leg-dot--aviso"></div>Aviso</div>
+                <div class="leg-item"><div class="leg-dot leg-dot--sem-aula"></div>Sem aula</div>
+                <div class="leg-item"><div class="leg-dot leg-dot--aula-extra"></div>Aula extra</div>
+              </div>
+              <div class="cal-grid"></div>
+            </div>
+
+            <div>
+              <div class="card events-card">
+                <div class="section-title section-title--tight"><i class="fa-solid fa-calendar-day"></i> Eventos de Hoje</div>
+                <div id="eventos-hoje-container"></div>
+              </div>
+              <div class="card events-card">
+                <div class="section-title section-title--tight"><i class="fa-solid fa-calendar-week"></i> Próximos Eventos</div>
+                <div id="eventos-proximos-container"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="notas">
+          <div class="page-title">Desempenho do Aluno</div>
+          <div class="page-sub">Notas e frequência por bimestre</div>
+
+          <div class="section-header">
+            <div class="tabs">
+              <button class="tab active">1º Bimestre</button>
+              <button class="tab">2º Bimestre</button>
+              <button class="tab">3º Bimestre</button>
+              <button class="tab">4º Bimestre</button>
+            </div>
+            <select class="select-field">
+              <option>2025</option>
+              <option>2024</option>
+            </select>
+          </div>
+
+          <div class="notas-layout">
+            <div class="card notas-table">
+              <div class="nt-row head">
+                <div>Disciplina</div>
+                <div>Professor</div>
+                <div>Faltas</div>
+                <div>AV1</div>
+                <div>AV2</div>
+                <div>AV3</div>
+                <div>Total</div>
+              </div>
+              <div id="notas-container"></div>
+            </div>
+
+            <div class="charts-panel">
+              <div class="card chart-card">
+                <div class="chart-title"><i class="fa-solid fa-chart-bar"></i> Progresso por Disciplina</div>
+                <div id="progresso-disciplinas-container"></div>
+              </div>
+              <div class="card chart-card">
+                <div class="chart-title"><i class="fa-solid fa-user-check"></i> Frequência por Disciplina</div>
+                <div id="frequencia-disciplinas-container"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="biblioteca">
+          <div class="page-title">Biblioteca Digital</div>
+          <div class="page-sub">Materiais organizados por disciplina e trilha</div>
+
+          <div class="bib-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Pesquisar materiais, apostilas, professores..." />
+          </div>
+          <div class="bib-grid" id="biblioteca-container"></div>
+        </section>
+
+        <section class="screen" id="mensagens">
+          <div class="page-title">Mensagens</div>
+          <div class="page-sub">Comunicação com professores e colegas</div>
+
+          <div class="msg-layout">
+            <div class="chat-area">
+              <div class="chat-header">
+                <div class="chat-avatar" id="chat-avatar"></div>
+                <div>
+                  <div class="chat-name" id="chat-name">Selecione uma conversa</div>
+                  <div class="chat-status" id="chat-status"></div>
+                </div>
+                <div class="chat-actions">
+                  <button><i class="fa-solid fa-phone"></i></button>
+                  <button><i class="fa-solid fa-video"></i></button>
+                  <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+              </div>
+              <div class="chat-messages" id="chat-messages-container"></div>
+              <form class="chat-input" id="chat-input-form">
+                <button type="button" class="chat-ico"><i class="fa-solid fa-paperclip"></i></button>
+                <input type="text" id="chat-input-field" placeholder="Digite sua mensagem..." autocomplete="off" />
+                <button type="button" class="chat-ico"><i class="fa-regular fa-face-smile"></i></button>
+                <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
+
+            <div class="contacts-panel">
+              <div class="contacts-search"><input type="text" placeholder="Buscar conversa..." /></div>
+              <div class="contacts-tabs">
+                <button class="ctab active">Tudo</button>
+                <button class="ctab">Conversas</button>
+                <button class="ctab">Grupos</button>
+              </div>
+              <div class="contact-list" id="contatos-container"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

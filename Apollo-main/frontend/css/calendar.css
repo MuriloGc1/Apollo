@@ -1,0 +1,130 @@
+.agenda-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
+
+.cal-card {
+  padding: 22px;
+}
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.cal-month {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+.leg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.leg-dot--atividade {
+  background: var(--green);
+}
+.leg-dot--prova {
+  background: #3b82f6;
+}
+.leg-dot--aviso {
+  background: var(--orange);
+}
+.leg-dot--sem-aula {
+  background: var(--red);
+}
+.leg-dot--aula-extra {
+  background: var(--primary);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.cal-day-name {
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+.cal-day {
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+.cal-day:hover {
+  background: var(--primary-bg);
+}
+.cal-day.today {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+.cal-day.has-event::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.cal-day.empty {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.events-card {
+  padding: 20px;
+}
+.events-card + .events-card {
+  margin-top: 16px;
+}
+.event-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.event-item:last-child {
+  border: none;
+}
+.event-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.event-time {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+.event-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
