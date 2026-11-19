@@ -1,8 +1,8 @@
-# RED - Rede Educacional Digital
+# Apollo
 
 ## Sobre o Projeto
 
-O **RED (Rede Educacional Digital)** é uma plataforma web desenvolvida para centralizar e otimizar a comunicação entre **professores, alunos e responsáveis**.
+O **Apollo** é uma plataforma web desenvolvida para centralizar e otimizar a comunicação entre **professores, alunos e responsáveis**.
 
 A proposta do sistema é substituir a fragmentação atual (WhatsApp, agendas físicas e e-mails) por um **ambiente único, organizado e eficiente**, melhorando a gestão escolar e o acompanhamento acadêmico.
 
@@ -26,7 +26,7 @@ Isso gera:
 
 ## Solução
 
-O RED atua como um **hub educacional centralizado**, oferecendo:
+O Apollo atua como um **hub educacional centralizado**, oferecendo:
 
 *  Agenda digital
 *  Comunicação integrada (chat)
